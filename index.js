@@ -1,37 +1,37 @@
 //  Need to get input from the user- inquirer
-const inquirer = require("inquirer"); 
+const inquirer = require("inquirer");
 const Employee = require("./lib/Employee");
-const tempy = require("./src/templete")
+const tempy = require("./src/templete");
+const fs = require("fs");
 // require intern,manager,Engineer
 // require path
 inquirer.prompt([
   {
-    type:"input",
-    name:"name",
-    message:"What is the employee name?"
-      
+    type: "input",
+    name: "name",
+    message: "What is the employee name?"
+
   },
   {
-    type:"input",
-    name:"email",
-    message:"What is your email?"
-      
+    type: "input",
+    name: "email",
+    message: "What is your email?"
+
   }
-  
-// wrap all the prompts in a function console questions call at end 
+
+  // wrap all the prompts in a function console questions call at end 
 
 
-]) .then(function(response){
+]).then(function (response) {
   console.log("resp", response)
 
-// creat employee objects from input
-const empy = new Employee(response.name, 0, response.email)
-const html = tempy()
-
-console.log(html)
+  // creat employee objects from input
+  const empy = new Employee(response.name, 0, response.email)
+  const html = tempy(empy)
+  fs.writeFileSync("./dist/index.html", html)
 
 })
-// create html from the emplyee objects 
+// create html from the emplyee objects
 
 //  write out that html to the file 
 // call function at very end
