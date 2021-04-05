@@ -1,6 +1,5 @@
 // dynamically create my html
 function returnHtmlStringOfEmployees(empy) {
-  console.log(empy)
   return `
   <!DOCTYPE html>
 <html lang="en">
@@ -79,10 +78,8 @@ function returnHtmlStringOfEngineer(Engineer) {
     `
 }
 
-
-
-
-
 module.exports = returnHtmlStringOfEmployees
-// link style.css in the html
-// link bootstrap in the html
+module.exports = returnHtmlStringOfManager
+module.exports = returnHtmlStringOfIntern
+module.exports = returnHtmlStringOfEngineer
+
