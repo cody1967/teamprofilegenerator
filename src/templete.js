@@ -79,7 +79,7 @@ function returnHtmlStringOfEngineer(Engineer) {
 }
 
 module.exports = returnHtmlStringOfEmployees
-module.exports = returnHtmlStringOfManager
-module.exports = returnHtmlStringOfIntern
-module.exports = returnHtmlStringOfEngineer
+// module.exports = returnHtmlStringOfManager
+// module.exports = returnHtmlStringOfIntern
+// module.exports = returnHtmlStringOfEngineer
 
